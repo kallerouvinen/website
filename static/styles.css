@@ -146,11 +146,6 @@ svg {
   animation: fade-in-left 1s ease;
 }
 
-.animation-delayed {
-  animation-fill-mode: backwards;
-  animation-delay: 1s;
-}
-
 .image {
   height: 85vh;
   object-fit: contain;
@@ -286,20 +281,19 @@ svg {
   }
 }
 
-.scroll-indicator-container {
+.scroll-indicator {
   position: absolute;
   bottom: 20px;
   align-self: center;
-}
-
-.scroll-indicator-container .mouse {
   display: flex;
+  align-items: center;
+  justify-content: center;
   height: 35px;
   width: 20px;
   border-radius: 15px;
   border: solid 2px #fc466b;
-  align-items: center;
-  justify-content: center;
+  animation-fill-mode: backwards;
+  animation-delay: 1s;
 }
 
 @keyframes scroll {
@@ -311,7 +305,8 @@ svg {
   }
 }
 
-.scroll-indicator-container .wheel {
+.scroll-indicator::after {
+  content: "";
   height: 10px;
   width: 4px;
   border-radius: 50%;
