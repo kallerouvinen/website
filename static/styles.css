@@ -86,6 +86,71 @@ svg {
   overflow: hidden;
 }
 
+@keyframes fade-in-top {
+  0% {
+    opacity: 0;
+    transform: translateY(-30px);
+  }
+  100% {
+    opacity: 1;
+    transform: translate(0px);
+  }
+}
+
+@keyframes fade-in-right {
+  0% {
+    opacity: 0;
+    transform: translateX(30px);
+  }
+  100% {
+    opacity: 1;
+    transform: translate(0px);
+  }
+}
+
+@keyframes fade-in-bottom {
+  0% {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  100% {
+    opacity: 1;
+    transform: translate(0px);
+  }
+}
+
+@keyframes fade-in-left {
+  0% {
+    opacity: 0;
+    transform: translateX(-30px);
+  }
+  100% {
+    opacity: 1;
+    transform: translate(0px);
+  }
+}
+
+.fade-in-from-top {
+  animation: fade-in-top 1s ease;
+}
+
+.fade-in-from-right {
+  animation: fade-in-right 1s ease;
+}
+
+.fade-in-from-bottom {
+  animation: fade-in-bottom 1s ease;
+}
+
+.fade-in-from-left {
+  animation: fade-in-left 1s ease;
+}
+
+.animation-delayed {
+  animation-fill-mode: backwards;
+  animation-delay: 1s;
+}
+
 .image {
   height: 85vh;
   object-fit: contain;
@@ -251,13 +316,13 @@ svg {
   width: 4px;
   border-radius: 50%;
   background-color: #fc466b;
-  animation: scroll 0.9s ease infinite alternate;
+  animation: scroll 0.9s ease 1.9s infinite alternate backwards;
 }
 
 .section-2-root {
   display: flex;
   justify-content: center;
-  background-color: #fc466b; /* TODO: Get from theme? */
+  background-color: #fc466b; /* TODO: Get colors from theme? */
   border-top: 3px solid #fff;
   padding: 24px 0;
 }

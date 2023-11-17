@@ -1,9 +1,5 @@
-<!-- <script src="https://unpkg.com/htmx.org@1.9.8"></script> -->
-
-<!-- have a button POST a click via AJAX -->
-<!-- <button hx-post="/clicked" hx-swap="outerHTML">Click Me</button> -->
-
-<html>
+<!DOCTYPE html>
+<html lang="en">
   <head>
     <link rel="preconnect" href="https://www.google.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" />
@@ -14,6 +10,9 @@
       as="style"
       onload="this.onload=null;this.rel='stylesheet'"
     />
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>TODO: Title</title>
     <script
       type="text/javascript"
       src="{{ url_for('static', filename='htmx-1.9.8.js') }}"
@@ -29,8 +28,7 @@
     <div class="section-1-root">
       <div class="section-1-container">
         <div class="section-1-grid-container">
-          <div class="grid-item image-container">
-            <!-- TODO: <FadeIn delay={0} direction="down"> -->
+          <div class="grid-item image-container fade-in-from-bottom">
             <picture>
               <source
                 srcset="{{url_for('static', filename='assets/image900.webp')}}"
@@ -42,32 +40,23 @@
                 alt=""
               />
             </picture>
-            <!-- </FadeIn> -->
           </div>
           <div class="grid-item text-panel">
             <div class="text-panel-container">
-              <!-- <FadeIn delay={0} direction="up"> -->
-              <span class="text-panel-1">Hi, I'm</span>
-              <!-- </FadeIn> -->
-              <!-- <FadeIn delay={0} direction="left"> -->
-              <span class="text-panel-2">Kalle,</span>
-              <!-- </FadeIn> -->
-              <!-- <FadeIn delay={0} direction="right"> -->
-              <span class="text-panel-3">a software</span>
-              <!-- </FadeIn> -->
-              <!-- <FadeIn delay={0} direction="down"> -->
-              <span class="text-panel-4">developer</span>
-              <!-- </FadeIn> -->
+              <span class="text-panel-1 fade-in-from-top">Hi, I'm</span>
+              <span class="text-panel-2 fade-in-from-left">Kalle,</span>
+              <span class="text-panel-3 fade-in-from-right">a software</span>
+              <span class="text-panel-4 fade-in-from-bottom">developer</span>
             </div>
           </div>
         </div>
       </div>
-      <div class="scroll-indicator-container">
-        <!-- TODO: <FadeIn delay={1000} direction="down"> -->
+      <div
+        class="scroll-indicator-container fade-in-from-bottom animation-delayed"
+      >
         <div class="mouse">
           <div class="wheel"></div>
         </div>
-        <!-- </FadeIn> -->
       </div>
     </div>
 
@@ -265,5 +254,8 @@
         </form>
       </div>
     </div>
+
+    <!-- Footer -->
+    <!-- TODO -->
   </body>
 </html>
