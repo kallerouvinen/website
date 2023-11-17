@@ -28,7 +28,7 @@
     <div class="section-1-root">
       <div class="section-1-container">
         <div class="section-1-grid-container">
-          <div class="grid-item image-container fade-in-from-bottom">
+          <div class="grid-item image-container fade-in-bottom">
             <picture>
               <source
                 srcset="{{url_for('static', filename='assets/image900.webp')}}"
@@ -41,17 +41,15 @@
               />
             </picture>
           </div>
-          <div class="grid-item text-panel">
-            <div class="text-panel-container">
-              <span class="text-panel-1 fade-in-from-top">Hi, I'm</span>
-              <span class="text-panel-2 fade-in-from-left">Kalle,</span>
-              <span class="text-panel-3 fade-in-from-right">a software</span>
-              <span class="text-panel-4 fade-in-from-bottom">developer</span>
-            </div>
+          <div class="grid-item text-panel-container">
+            <span id="panel-1" class="text-panel fade-in-top">Hi, I'm</span>
+            <span id="panel-2" class="text-panel fade-in-left">Kalle,</span>
+            <span id="panel-3" class="text-panel fade-in-right">a software</span>
+            <span id="panel-4" class="text-panel fade-in-bottom">developer</span>
           </div>
         </div>
       </div>
-      <div class="scroll-indicator fade-in-from-bottom"></div>
+      <div class="scroll-indicator fade-in-bottom"></div>
     </div>
 
     <!-- Section 2 -->
@@ -62,9 +60,8 @@
             <div class="about-me-container">
               <h1 class="about-me-title">What I do</h1>
               <p class="about-me-paragraph">
-                I create dynamic, responsive and fast user interfaces with years
-                of experience in building apps using <b>React</b> and
-                <b>React Native</b>.
+                I create dynamic, responsive and fast user interfaces with years of experience in
+                building apps using <b>React</b> and <b>React Native</b>.
               </p>
               <p class="about-me-paragraph">
                 On my free time I have dabbled with game programming using
@@ -73,19 +70,16 @@
               <hr class="divider" />
               <h1 class="about-me-title">What I don't do</h1>
               <p class="about-me-paragraph">
-                I would fail to draw any popular sorting algorithm on a
-                whiteboard off the top of my head. I also can't recall the
-                difference between slice() and splice() whenever I need to split
-                an array.
+                I would fail to draw any popular sorting algorithm on a whiteboard off the top of my
+                head. I also can't recall the difference between slice() and splice() whenever I
+                need to split an array.
               </p>
               <p class="about-me-paragraph">Also, I don't drink coffee.</p>
             </div>
           </div>
           <div class="grid-item technologies">
             <div class="technologies-container">
-              <h1 class="technologies-title">
-                Technologies I have used professionally
-              </h1>
+              <h1 class="technologies-title">Technologies I have used professionally</h1>
               <div class="technologies-chip-container">
                 <div class="tech-chip">
                   <svg focusable="false" viewBox="0 0 24 24" aria-hidden="true">
@@ -151,9 +145,7 @@
                 </div>
               </div>
               <hr class="divider" />
-              <h1 class="technologies-title">
-                Technologies I have used on my free time
-              </h1>
+              <h1 class="technologies-title">Technologies I have used on my free time</h1>
               <div class="technologies-chip-container">
                 <div class="tech-chip">
                   <svg focusable="false" viewBox="0 0 24 24" aria-hidden="true">
