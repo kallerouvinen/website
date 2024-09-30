@@ -178,7 +178,12 @@
           You can contact me using this form or via any of my social media.
           Links can be found below.
         </p>
-        <form autocomplete="off" hx-post="/submit-form" hx-trigger="submit">
+        <form autocomplete="off" id="contact-form">
+          <input
+            type="hidden"
+            name="access_key"
+            value="0c5addc3-08fa-4a52-8095-44c1394789b8"
+          />
           <input
             name="botcheck"
             style="position: absolute; left: -9999px"
@@ -198,9 +203,36 @@
             <textarea id="message" name="message" required rows="5"></textarea>
           </div>
           <div class="grid-item section-3-submit">
-            <!-- TODO: Implement submit -->
-            <button type="submit">Submit</button>
-            <p class="error-text" id="form-response"></p>
+            <button id="submit" type="submit">
+              <span
+                class="submit-label"
+                id="submit-label-ready"
+                aria-hidden="true"
+                >Send</span
+              >
+              <span
+                class="submit-label"
+                id="submit-label-loading"
+                aria-hidden="true"
+                style="transform: translateY(50px)"
+                >Sending...</span
+              >
+              <span
+                class="submit-label"
+                id="submit-label-success"
+                aria-hidden="true"
+                style="transform: translateY(50px)"
+                >Done</span
+              >
+              <span
+                class="submit-label"
+                id="submit-label-error"
+                aria-hidden="true"
+                style="transform: translateY(50px)"
+                >Failed</span
+              >
+            </button>
+            <p id="error-text"></p>
           </div>
         </form>
       </div>
