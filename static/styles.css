@@ -6,6 +6,7 @@
   --color-section-3: #6e58d7;
   --color-white: #fff;
   --color-tech-icon: #61dafb;
+  --color-footer: #3d28a4;
 }
 
 body {
@@ -494,4 +495,43 @@ textarea {
   grid-area: submit;
   align-items: center;
   justify-content: space-between;
+}
+
+footer {
+  display: flex;
+  justify-content: center;
+  background-color: var(--color-footer);
+  color: var(--color-white);
+}
+
+.footer-container {
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  text-align: center;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 900px;
+  padding: 8px 48px;
+  box-sizing: border-box;
+}
+
+@media (min-width: 600px) {
+  .footer-container {
+    flex-direction: row;
+  }
+}
+
+.link-container {
+  display: flex;
+  gap: 16px;
+}
+
+a {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 32px;
+  width: 32px;
+  color: inherit;
 }
