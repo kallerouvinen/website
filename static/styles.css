@@ -481,7 +481,8 @@ textarea {
   box-shadow: 0px 3px 16px 5px rgba(0, 0, 0, 0.1);
 }
 
-input:focus {
+input:focus,
+textarea:focus {
   outline: none;
 }
 
