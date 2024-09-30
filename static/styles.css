@@ -46,6 +46,7 @@ svg {
 
 .section-1-root {
   display: flex;
+  position: relative;
   justify-content: center;
   min-height: 100%;
   overflow: hidden;
@@ -94,7 +95,21 @@ svg {
 
 @media (min-width: 960px) {
   .image-container {
+    width: initial;
+    left: calc(25% - 30vh);
+    opacity: 1;
     animation: anim-fade-in-bottom 1s ease;
+  }
+}
+
+img {
+  height: 85vh;
+  object-fit: contain;
+}
+
+@media (min-width: 1280px) {
+  img {
+    height: 90vh;
   }
 }
 
@@ -167,25 +182,6 @@ svg {
 
 .fade-in-left {
   animation: anim-fade-in-left 1s ease;
-}
-
-img {
-  height: 85vh;
-  object-fit: contain;
-}
-
-@media (min-width: 1280px) {
-  img {
-    height: 90vh;
-  }
-}
-
-@media (min-width: 960px) {
-  .image-container {
-    width: initial;
-    left: calc(25% - 30vh);
-    opacity: 1;
-  }
 }
 
 .text-panel-container {
