@@ -12,16 +12,13 @@
     />
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>TODO: Title</title>
+    <title>Kalle Rouvinen | Software Developer</title>
     <script
-      type="text/javascript"
-      src="{{ url_for('static', filename='htmx-1.9.8.js') }}"
+      src="https://unpkg.com/htmx.org@2.0.2"
+      integrity="sha384-Y7hw+L/jvKeWIRRkqWYfPcvVxHzVzn5REgzbawhxAuQGwX1XWe70vji+VSeHOThJ"
+      crossorigin="anonymous"
     ></script>
-    <link
-      rel="stylesheet"
-      type="text/css"
-      href="{{ url_for('static', filename='styles.css') }}"
-    />
+    <link rel="stylesheet" type="text/css" href="styles.css" />
   </head>
   <body>
     <!-- Section 1 -->
@@ -29,23 +26,21 @@
       <div class="section-1-container">
         <div class="section-1-grid-container">
           <div class="grid-item image-container fade-in-bottom">
+            <!-- TODO: Find best practices for showing images -->
             <picture>
-              <source
-                srcset="{{url_for('static', filename='assets/image900.webp')}}"
-                type="image/webp"
-              />
-              <img
-                class="image"
-                src="{{url_for('static', filename='assets/image900.jpg')}}"
-                alt=""
-              />
+              <source srcset="assets/image900.webp" type="image/webp" />
+              <img class="image" src="assets/image900.jpg" alt="" />
             </picture>
           </div>
           <div class="grid-item text-panel-container">
             <span id="panel-1" class="text-panel fade-in-top">Hi, I'm</span>
             <span id="panel-2" class="text-panel fade-in-left">Kalle,</span>
-            <span id="panel-3" class="text-panel fade-in-right">a software</span>
-            <span id="panel-4" class="text-panel fade-in-bottom">developer</span>
+            <span id="panel-3" class="text-panel fade-in-right"
+              >a software</span
+            >
+            <span id="panel-4" class="text-panel fade-in-bottom"
+              >developer</span
+            >
           </div>
         </div>
       </div>
@@ -60,8 +55,9 @@
             <div class="about-me-container">
               <h1 class="about-me-title">What I do</h1>
               <p class="about-me-paragraph">
-                I create dynamic, responsive and fast user interfaces with years of experience in
-                building apps using <b>React</b> and <b>React Native</b>.
+                I create dynamic, responsive and fast user interfaces with years
+                of experience in building apps using <b>React</b> and
+                <b>React Native</b>.
               </p>
               <p class="about-me-paragraph">
                 On my free time I have dabbled with game programming using
@@ -70,16 +66,19 @@
               <hr class="divider" />
               <h1 class="about-me-title">What I don't do</h1>
               <p class="about-me-paragraph">
-                I would fail to draw any popular sorting algorithm on a whiteboard off the top of my
-                head. I also can't recall the difference between slice() and splice() whenever I
-                need to split an array.
+                I would fail to draw any popular sorting algorithm on a
+                whiteboard off the top of my head. I also can't recall the
+                difference between slice() and splice() whenever I need to split
+                an array.
               </p>
               <p class="about-me-paragraph">Also, I don't drink coffee.</p>
             </div>
           </div>
           <div class="grid-item technologies">
             <div class="technologies-container">
-              <h1 class="technologies-title">Technologies I have used professionally</h1>
+              <h1 class="technologies-title">
+                Technologies I have used professionally
+              </h1>
               <div class="technologies-chip-container">
                 <div class="tech-chip">
                   <svg focusable="false" viewBox="0 0 24 24" aria-hidden="true">
@@ -145,7 +144,9 @@
                 </div>
               </div>
               <hr class="divider" />
-              <h1 class="technologies-title">Technologies I have used on my free time</h1>
+              <h1 class="technologies-title">
+                Technologies I have used on my free time
+              </h1>
               <div class="technologies-chip-container">
                 <div class="tech-chip">
                   <svg focusable="false" viewBox="0 0 24 24" aria-hidden="true">
@@ -191,57 +192,40 @@
           You can contact me using this form or via any of my social media.
           Links can be found below.
         </p>
-        <form autocomplete="off">
-          <div class="grid-item section-3-name">
-            <div class="input-container">
-              <label class="input-label" for="name">Name</label>
-              <input
-                class="input"
-                type="text"
-                id="name"
-                name="name"
-                autocomplete="off"
-              />
-              <!-- onChange -->
-              <!-- required -->
-              <!-- value -->
-              <!-- onfocus: load captcha -->
-            </div>
-          </div>
-          <div class="grid-item section-3-email">
-            <div class="input-container">
-              <label class="input-label" for="email">Email</label>
-              <input
-                class="input"
-                type="text"
-                id="email"
-                name="email"
-                autocomplete="off"
-              />
-            </div>
-          </div>
-          <div class="grid-item section-3-message">
-            <div class="input-container">
-              <label class="input-label" for="message">Message</label>
-              <textarea
-                class="input textarea"
-                id="email"
-                name="email"
-                rows="5"
-              ></textarea>
-            </div>
-          </div>
-          <div class="grid-item section-3-recaptcha">
+        <form autocomplete="off" hx-post="/submit-form" hx-trigger="submit">
+          <input
+            name="botcheck"
+            style="position: absolute; left: -9999px"
+            tabindex="-1"
+            type="checkbox"
+          />
+          <div class="grid-item" style="grid-area: name">
+            <label for="name">Name</label>
+            <input id="name" name="name" required type="text" />
             <!-- TODO -->
+            <!-- onChange -->
+            <!-- required -->
+            <!-- value -->
+          </div>
+          <div class="grid-item" style="grid-area: email">
+            <label for="email">Email</label>
+            <input id="email" name="email" type="text" />
+          </div>
+          <div class="grid-item" style="grid-area: message">
+            <label for="message">Message</label>
+            <textarea id="email" name="email" rows="5"></textarea>
           </div>
           <div class="grid-item section-3-submit">
-            <!-- TODO -->
+            <!-- TODO: Implement submit -->
+            <button type="submit">Submit</button>
+            <p class="error-text" id="form-response"></p>
           </div>
         </form>
       </div>
     </div>
 
     <!-- Footer -->
-    <!-- TODO -->
+    <!-- TODO: Implement footer -->
   </body>
+  <script src="scripts.js"></script>
 </html>

@@ -469,7 +469,7 @@ svg {
   margin-bottom: 32px;
 }
 
-.section-3-grid-container {
+form {
   display: grid;
   gap: 16px;
   grid-template-columns: 1fr 1fr;
@@ -477,37 +477,29 @@ svg {
     "name name"
     "email email"
     "message message"
-    "recaptcha recaptcha"
     "submit submit";
 }
 
 @media (min-width: 900px) {
-  .section-3-grid-container {
+  form {
     grid-template-areas:
       "name email"
       "message message"
-      "recaptcha recaptcha"
       "submit submit";
   }
 }
 
-.section-3-name {
-  grid-area: name;
-}
-
-.input-container {
-  display: flex;
-  flex: 1;
+form .grid-item {
   flex-direction: column;
 }
 
-.input-label {
+label {
   padding: 8px;
   color: #fff;
   font-weight: 500;
 }
 
-.input {
+input, textarea {
   flex: 1;
   padding: 16px;
   font: inherit;
@@ -516,24 +508,12 @@ svg {
   box-shadow: 0px 3px 16px 5px rgba(0, 0, 0, 0.1);
 }
 
-.input:focus {
+input:focus {
   outline: none;
 }
 
-.textarea {
+textarea {
   resize: none;
-}
-
-.section-3-email {
-  grid-area: email;
-}
-
-.section-3-message {
-  grid-area: message;
-}
-
-.section-3-recaptcha {
-  grid-area: recaptcha;
 }
 
 .section-3-submit {
