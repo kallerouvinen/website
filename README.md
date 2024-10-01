@@ -1,6 +1,6 @@
 # Website
 
-This is the repository for my [website](https://www.kallerouvinen.com), built with **HTML**, **CSS**, and **JavaScript**. While my main web expertise lies in **React**, I opted for simplicity in this project to keep the structure clean and lightweight.
+This is the repository for my <a href="https://www.kallerouvinen.com" target="_blank">website</a>, built with **HTML**, **CSS**, and **JavaScript**. While my main web expertise lies in **React**, I opted for simplicity in this project to keep the structure clean and lightweight.
 
 ## Technologies
 - **HTML5**: For structuring the content
